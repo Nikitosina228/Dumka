@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Dumka</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+
+    <header>
+      <div id="headergrad" class="jumbotron rounded-0">
+        <div class="container">
+          <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 box-shadow">
+            <h1 class="display-3 text-white my-0 mr-md-auto font-weight-normal">DUMKA</h1>
+            <nav class="my-2 my-md-0 mr-md-3">
+              <a class="p-2 text-white" href="#">Форум</a>
+              <a class="p-2 text-white" href="#">Задачи</a>
+            </nav>
+            <a class="btn btn-outline-light btn" href="#" data-toggle="modal" data-target="#exampleModal">войти</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+
+        <div class="modal-content" id="log">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">вход</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form class="px-3">
+
+                <div class="py-2">
+                  <input type="text" id="inputEmail" class="form-control" placeholder="Email или Логин" required="" autofocus="">
+                </div>
+                <div class="py-2">
+                  <input type="password" id="inputPassword" class="form-control" placeholder="пароль" required="">  
+                </div>
+                <div class="py-2">
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Войти</button>
+                  <div class="d-flex justify-content-between">
+                    <span><a href="#" onclick="modalopen('reg')">У меня нет аккаунта</a></span>
+                    <span><a href="#" onclick="modalopen('forgot')">Я забыл пароль</a></span>
+                  </div>
+                </div>
+                
+              </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-dialog modal-invisible" id = "reg" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Регистрация</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form class="px-3">
+
+                <div>
+                  <div class="py-2">
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Ф.И.О." required="" autofocus=""/>
+                  </div>
+                  <div class="py-2">
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Логин" required="" autofocus=""/>
+                  </div>
+                  <div class="py-2">
+                    <input type="text" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus=""/>
+                  </div>
+                  <div class="py-2">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="пароль" required=""/>  
+                  </div>
+                  <div class="py-2">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Повтор пароля" required=""/> 
+                  </div>
+                </div>
+                <div class="py-2">
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Зарегистрироваться</button>
+                  <div class="d-flex justify-content-between">
+                    <span><a href="#" onclick="modalopen('log')">У меня есть аккаунт</a></span>
+                  </div>
+                </div>
+                
+              </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-dialog modal-invisible" id = "forgot" role="document">
+
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Восстановление пароля</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <form class="px-3">
+
+                <div class="py-2">
+                  <input type="text" id="inputEmail" class="form-control" placeholder="Email" required="" autofocus="">
+                </div>
+                <div class="py-2">
+                  <input type="text" id="inputEmail" class="form-control" placeholder="код" required="" autofocus="">
+                </div>
+                <div class="py-2">
+                  <button class="btn btn-lg btn-primary btn-block" type="submit">Восстановить пароль</button>
+                  <div class="d-flex justify-content-between">
+                    <span><a href="#" onclick="modalopen('log')">Я вспомнил пароль!</a></span>
+                  </div>
+                </div>
+                
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <main role="main">
+      <div class="container">
+      <!-- /.новости -->
+        <div class="d-flex justify-content-center"> 
+          <h1 class="text-primary fw-500">Новости</h1>
+        </div> 
+        <hr>
+        <div class="posts-container mx-auto px-3">
+
+          <div class="post">
+            <div class="p-3">
+              <h2 class="post-title fw-500">тест <span class="badge badge-primary">New</span></h2>
+              <span class="post-date">8 февраля 2020</span>
+
+              <div>
+                <h5>текст-текст-текст-текст</h5>
+                <ul class="border-left border-dark">
+                  <li><strong><h4>текст:</h4></strong>
+                    <ul>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                    </ul>
+                  </li>
+                </ul>
+                <h5>текст-текст-текст-текст</h5>
+              </div>
+            </div>
+
+            <div class="p-3">
+              <h2 class="post-title fw-500">тест </h2>
+              <span class="post-date">1 февраля 2020</span>
+
+              <div>
+                <h5>текст-текст-текст-текст</h5>
+                <ul class="border-left border-dark">
+                  <li><strong><h4>текст:</h4></strong>
+                    <ul>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                      <li><h5 class="font-weight-normal">пример текста</h5></li>
+                    </ul>
+                  </li>
+                </ul>
+                <h5>текст-текст-текст-текст</h5>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- /.новости -->
+
+
+
+      </div>
+
+    </main>
+
+    <hr>
+    <footer class="container">
+      <p class="d-flex justify-content-center">©Nikitosik 2020</p>
+    </footer>
+
+    <script src="jquery-3.4.1.min.js"></script>
+    <script  src="script.js"></script>
+    <script  src="bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    
+}
+/*text-primary*/
+#headergrad {
+    /*background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    background: linear-gradient(to top, #ffffff 0%, #33ccff 75%);
+    background: linear-gradient(to bottom, #0066ff 59%, #ffffff 99%);*/
+    background: linear-gradient(to top, #ffffff 0%, #0099ff 88%);
+    color: white;
+    opacity: 0.95;
+}
+
+.header {
+    height: 65px;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    opacity: 0;
+    top: -65px;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    -webkit-transition: all .5s;
+    -ms-transition: all .5s;
+    transition: all .5s;
+}
+
+.bg-ColorFooter{
+    border-top: 0;
+    background: #f3f4f6;
+}
+
+.modal-invisible{
+    position: absolute;
+    display: none;
+}
+/*https://www.w3schools.com/colors/colors_gradient.asp
+
+    
+    <footer class="text-muted bg-ColorFooter">
+      <div class="container">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is © Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="/docs/4.4/getting-started/introduction/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+
+    <hr>
+    <footer class="container">
+      <p class="d-flex justify-content-center">©Nikitosik 2020</p>
+    </footer>
+
+*/
